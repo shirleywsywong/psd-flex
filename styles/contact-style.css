@@ -248,6 +248,20 @@ nav {
 
 nav a {
   padding: 10px 15px;
+  color: white;
+}
+
+nav a:hover::after {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 70%;
+  height: 3px;
+  background-color: #fdd908;
+}
+
+i.hamburger {
+  color: white;
 }
 
 nav .menu {

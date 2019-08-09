@@ -25,9 +25,20 @@ nav {
     justify-content: space-between;
     a {
         padding: 10px 15px;
+        color: $white;
+        &:hover::after {
+            content: "";
+            display: block;
+            margin: auto;
+            width: 70%;
+            height: 3px;
+            background-color: $dandelion;
+        }
     }
 }
-
+i.hamburger {
+    color: $white;
+}
 nav .menu{
     display: none;
 }
