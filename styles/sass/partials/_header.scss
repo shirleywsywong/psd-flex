@@ -1,0 +1,50 @@
+//header banner section
+@mixin headerBanner {
+    width: 100vw;
+    height: 60vw;
+    padding-top: 30px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom right;
+}
+
+//H1 style
+@mixin h1Style($color) {
+  font-family: 'IM Fell English', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;	
+  line-height: 5rem;
+  color: $color;
+}
+
+//top menu
+nav {
+    justify-content: space-between;
+    a {
+        padding: 10px 15px;
+    }
+}
+
+nav .menu{
+    display: none;
+}
+nav i.hamburger:hover + .menu{
+    display: flex;
+}
+
+/* Landscape phones and down */
+@media (min-width: 480px){}
+/* Landscape phone to portrait tablet */
+@media (min-width: 768px){}
+/* Portrait tablet and small desktops */
+@media (min-width: 940px){
+    header {
+        width: 100vw;
+        height: 35vw;
+    }
+}
+/* Large monitors */
+@media (min-width: 1400px){}

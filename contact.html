@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact - SW Project 2</title>
-    <script src="https://kit.fontawesome.com/1bb85a0dc5.js"></script> 
+    <script src="https://kit.fontawesome.com/1bb85a0dc5.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English:400,400i|Roboto:400,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/contact-style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <i class="fas fa-bars menu" aria-label="Select Menu Options"></i>
-            <ul>
+    <header class="wrapper">
+        <nav class="flex">
+            <i class="fas fa-bars hamburger" aria-label="Select Menu Options"></i>
+            <ul class="flex menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -20,9 +23,9 @@
         </nav>
         <h1>Get in touch</h1>
     </header>
-    <aside>
+    <aside class="wrapper">
         <nav class="social-menu">
-            <ul>
+            <ul class="flex">
                 <li>
                     <a href="">
                     <i class="fab fa-facebook-f" aria-hidden="true"></i>
@@ -66,9 +69,9 @@
         <input type="email" name="contact-email" id="contact-email" placeholder="Email address">
 
         <label for="contact-message" class="visuallyHidden">Message</label>
-        <input type="text" name="contact-message" id="contact-message" placeholder="Message">
+        <textarea name="contact-message" id="contact-message" placeholder="Message"></textarea>
 
-        <input type="contact-submit" value="Submit">
+        <input type="contact-submit" value="Submit" class="button form-button">
     </form>
     
     <footer>

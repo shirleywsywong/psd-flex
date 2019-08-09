@@ -1,0 +1,19 @@
+@import 'partials/setup';
+@import 'partials/global';
+@import 'partials/form';
+
+body {
+    background: lavender;
+}
+
+form {
+  background: $ice-blue;
+  padding: 30px;
+}
+
+input[type=text], 
+input[type=email]
+{
+    @include formStyle($ice-blue, $dark-blue);
+    border-bottom:1px solid $dandelion;
+}

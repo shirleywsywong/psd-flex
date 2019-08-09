@@ -1,0 +1,46 @@
+@import 'partials/setup';
+@import 'partials/global';
+@import 'partials/header';
+@import 'partials/form';
+
+p {
+  margin: 0;
+}
+i {
+  font-size: 1.5rem;
+}
+
+//header and navigation styles are in header partial
+h1 {
+  @include h1Style($white);
+}
+header {
+  @include headerBanner;
+  background-image: url(../assets/contact-header.jpg);
+}
+
+aside {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.social-menu li {
+  padding: 10px;
+}
+.address {
+  margin: 20px 0;
+}
+
+// other form styles are found in forms partial
+form {
+  background: $dark-blue;
+  padding: 30px;
+}
+
+input[type=text], 
+input[type=email]
+{
+  @include formStyle($dark-blue, $white);
+  border-bottom:1px solid $dandelion;
+}
+
+//footer styles are in global partial

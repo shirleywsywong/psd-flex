@@ -1,0 +1,74 @@
+//colors
+$black: black;
+$white: white;
+$ice-blue:#eafefc ;
+$dandelion:#fdd908 ;
+$dark-blue:#0d457f ;
+
+//basic styles
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+img {
+  width: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	background: $ice-blue;
+}
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+footer {
+	text-align: center;
+	background: $dandelion;
+	padding: 0.5rem;
+	font-size: 0.75rem;
+	color: $dark-blue;
+}
+
+//class library
+.flex {
+	display: flex;
+}
+.relative {
+  position: relative;
+}
+.wrapper {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.button {
+	font-family: 'IM Fell English', serif;
+	background: $dandelion;
+	color: $dark-blue;
+	text-transform: uppercase;
+	font-style: italic;	
+}
+
+
+
+
+
+
+// .emphasize {
+//     &:after {
+//         content: "";
+//         display: block;
+//         margin: auto;
+//         width: 80%;
+//         height: 3px;
+//         background-color: black;
+//     }
+// }

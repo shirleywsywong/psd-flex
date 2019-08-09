@@ -1,0 +1,23 @@
+
+//formfields base styles
+@mixin formStyle($bgColor, $fontColor) {
+    padding: 10px 15px;
+    width: 100%;
+    margin: 10px 0;
+    border: 0;
+    background: $bgColor;
+    color: $fontColor
+}
+
+textarea {
+    @include formStyle($dark-blue, $white);
+    height: 150px;
+    border: 1px solid $dandelion;
+}
+
+.form-button {
+    width: 100%;
+    border: 0;
+    padding: 0.5rem;
+    text-align: center;
+}
