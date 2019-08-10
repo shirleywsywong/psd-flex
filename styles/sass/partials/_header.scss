@@ -2,11 +2,11 @@
 @mixin headerBanner {
     width: 100vw;
     height: 60vw;
-    padding-top: 30px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: bottom right;
+    align-items: center;
 }
 
 //H1 style
@@ -20,30 +20,41 @@
   color: $color;
 }
 
+//yellow underline on hover and current page
+@mixin underline {
+    content: "";
+    display: block;
+    margin: 3px auto;
+    width: 100%;
+    height: 3px;
+    background-color: $dandelion;
+}
+
 //top menu
-nav {
-    justify-content: space-between;
-    a {
-        padding: 10px 15px;
-        color: $white;
-        &:hover::after {
-            content: "";
-            display: block;
-            margin: auto;
-            width: 70%;
-            height: 3px;
-            background-color: $dandelion;
+.top-nav {
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    background: $nav-blue;
+    ul {
+        justify-content: space-evenly;
+        a {
+            padding: 10px 15px;
+            color: $white;
+            display: inline-block;
+            transition: all 0.2s ease;
+            &:hover, &:focus {
+                color: $dandelion;
+            }
+            &:hover::after {
+                @include underline;
+            }
         }
     }
 }
-i.hamburger {
-    color: $white;
-}
-nav .menu{
-    display: none;
-}
-nav i.hamburger:hover + .menu{
-    display: flex;
+
+.active::after {
+    @include underline;
 }
 
 /* Landscape phones and down */

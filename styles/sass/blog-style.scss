@@ -1,19 +1,87 @@
 @import 'partials/setup';
 @import 'partials/global';
+@import 'partials/header';
 @import 'partials/form';
 
 body {
-    background: lavender;
+  background: $ice-blue;
 }
 
+//header and navigation styles are in header partial
+h1 {
+  @include h1Style($white);
+}
+.hero-banner {
+  @include headerBanner;
+  background-image: url(../assets/blog-header.jpg);
+}
+
+// blog content section styles
+.blog-content {
+  flex-direction: column;
+  .blog-img {
+    order: 1;
+  }
+  p:nth-last-child(2), p:last-child {
+    order: 2;
+  }
+  h2 {
+    @include headingStyle ($dark-blue);
+  }
+}
+
+// side section styles
+aside {
+  background: $dark-blue;
+  padding-bottom: 30px;
+  h3 {
+    @include headingStyle ($dandelion);
+  }
+  p, a {
+    color: $white;
+  }
+  ul li {
+    color: $white;
+    list-style: disc;
+    margin-left: 1rem;
+  }
+}
+
+// comments section
+.comments {
+  h3 {
+    @include headingStyle ($dark-blue);
+  }
+  .comment-title {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .comment-img {
+    width: 10%;
+  }
+  .comment-date {
+    margin: 10px;
+  }
+}
+
+// other form styles are found in forms partial
 form {
   background: $ice-blue;
-  padding: 30px;
 }
-
 input[type=text], 
 input[type=email]
 {
     @include formStyle($ice-blue, $dark-blue);
     border-bottom:1px solid $dandelion;
 }
+textarea {
+  @include formStyle($ice-blue, $white);
+  height: 150px;
+  border: 1px solid $dandelion;
+}
+.form-button {
+  color: $dandelion;
+  background-color: $dark-blue;
+}
+
+//footer styles are in global partial

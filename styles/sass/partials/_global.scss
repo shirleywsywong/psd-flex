@@ -1,9 +1,10 @@
 //colors
 $black: black;
 $white: white;
-$ice-blue:#eafefc ;
-$dandelion:#fdd908 ;
-$dark-blue:#0d457f ;
+$ice-blue:#eafefc;
+$dandelion:#fdd908;
+$dark-blue:#0d457f;
+$nav-blue: rgba(13, 69, 127, 0.8);
 
 //basic styles
 ul {
@@ -57,6 +58,15 @@ footer {
 	font-style: italic;	
 }
 
+// base style for h2, h3, etc
+@mixin headingStyle($color) {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  color: $color;
+}
 
 
 

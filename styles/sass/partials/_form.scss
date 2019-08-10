@@ -9,12 +9,6 @@
     color: $fontColor
 }
 
-textarea {
-    @include formStyle($dark-blue, $white);
-    height: 150px;
-    border: 1px solid $dandelion;
-}
-
 .form-button {
     width: 100%;
     border: 0;
