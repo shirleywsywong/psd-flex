@@ -24,7 +24,7 @@
         </div>
     </header>
     <main>
-        <div class="blog-content flex wrapper">
+        <section class="blog-content flex wrapper">
             <div class="blog-img">
                 <img src="assets/blog-post-image.jpg" alt="bow line tied to bow anchor of a yacht">
             </div>
@@ -76,11 +76,13 @@
         </div>
         <form action="" class="comment-form">
         
-            <label for="comment-name" class="visuallyHidden">Name</label>
-            <input type="text" name="comment-name" id="comment-name" placeholder="Name">
-        
-            <label for="comment-email" class="visuallyHidden">Email Address</label>
-            <input type="email" name="comment-email" id="comment-email" placeholder="Email address">
+            <div class="form-half flex">
+                <label for="comment-name" class="visuallyHidden">Name</label>
+                <input type="text" name="comment-name" id="comment-name" placeholder="Name">
+            
+                <label for="comment-email" class="visuallyHidden">Email Address</label>
+                <input type="email" name="comment-email" id="comment-email" placeholder="Email address">
+            </div>
         
             <label for="comment-message" class="visuallyHidden">Comment</label>
             <textarea type="text" name="comment-message" id="comment-message" placeholder="Comment"></textarea>

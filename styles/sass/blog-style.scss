@@ -71,13 +71,16 @@ form {
 input[type=text], 
 input[type=email]
 {
-    @include formStyle($ice-blue, $dark-blue);
-    border-bottom:1px solid $dandelion;
+  @include formStyle($ice-blue, $dark-blue);
+  border-bottom:1px solid $dandelion;
 }
 textarea {
   @include formStyle($ice-blue, $white);
   height: 150px;
   border: 1px solid $dandelion;
+  @media (min-width: 940px){
+    width: 100%;
+  }
 }
 .form-button {
   color: $dandelion;

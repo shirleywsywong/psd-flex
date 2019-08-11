@@ -17,12 +17,27 @@ h1 {
 .hero-banner {
   @include headerBanner;
   background-image: url(../assets/contact-header.jpg);
+  background-position: bottom right;
 }
 
 // body styles
+main {
+  flex-direction: column;
+  @media (min-width: 940px){
+    flex-direction: row;
+  }
+}
 aside {
   padding-top: 30px;
   padding-bottom: 30px;
+  flex-direction: column;
+  @media (min-width: 768px){
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  @media (min-width: 940px){
+    flex-direction: column;
+  }
 }
 .social-menu li {
   padding: 10px;
@@ -48,6 +63,18 @@ textarea {
   @include formStyle($dark-blue, $white);
   height: 150px;
   border: 1px solid $dandelion;
+  @media (min-width: 940px){
+    width: 100%;
+  }
 }
 
 //footer styles are in global partial
+
+/* Landscape phone to portrait tablet */
+
+/* Portrait tablet and small desktops */
+@media (min-width: 940px){
+
+}
+/* Large monitors */
+@media (min-width: 1400px){}

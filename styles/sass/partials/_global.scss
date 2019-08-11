@@ -28,8 +28,8 @@ body {
 	background: $ice-blue;
 }
 section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 footer {
 	text-align: center;
@@ -42,9 +42,10 @@ footer {
 //class library
 .flex {
 	display: flex;
+	display: -webkit-flex;
 }
-.relative {
-  position: relative;
+.grid {
+  display: grid;
 }
 .wrapper {
 	padding-left: 30px;
@@ -68,17 +69,17 @@ footer {
   color: $color;
 }
 
+/* Landscape phones and down */
+@media (min-width: 480px){}
+/* Landscape phone to portrait tablet */
+@media (min-width: 768px){}
+/* Portrait tablet and small desktops */
+@media (min-width: 940px){
+	.wrapper {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+/* Large monitors */
+@media (min-width: 1400px){}
 
-
-
-
-// .emphasize {
-//     &:after {
-//         content: "";
-//         display: block;
-//         margin: auto;
-//         width: 80%;
-//         height: 3px;
-//         background-color: black;
-//     }
-// }

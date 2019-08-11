@@ -6,9 +6,19 @@
     margin: 10px 0;
     border: 0;
     background: $bgColor;
-    color: $fontColor
+    color: $fontColor;
+    @media (min-width: 940px){
+      width: 47%;
+    }
 }
 
+.form-half {
+    flex-direction: column;
+    @media (min-width: 940px){
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
 .form-button {
     width: 100%;
     border: 0;
