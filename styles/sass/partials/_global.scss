@@ -26,6 +26,10 @@ body {
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
 	background: $ice-blue;
+	font-size: 1.1rem;
+	@media (min-width: 1200px){
+		font-size: 1.3rem;
+	}
 }
 section {
   padding-top: 30px;
@@ -37,6 +41,9 @@ footer {
 	padding: 0.5rem;
 	font-size: 0.75rem;
 	color: $dark-blue;
+	@media (min-width: 1200px){
+        font-size: 1rem;
+    }
 }
 
 //class library
@@ -50,6 +57,10 @@ footer {
 .wrapper {
 	padding-left: 30px;
 	padding-right: 30px;
+	@media (min-width: 940px){
+		padding-left: 50px;
+		padding-right: 50px;
+	}
 }
 .button {
 	font-family: 'IM Fell English', serif;
@@ -68,18 +79,21 @@ footer {
   font-style: italic;
   color: $color;
 }
+//left-box shadow
+@mixin l-shadow {
+	box-shadow: -20px 20px $dandelion;
+}
+//right-box shadow
+@mixin r-shadow {
+	box-shadow: 20px 20px $dandelion;
+}
 
 /* Landscape phones and down */
 @media (min-width: 480px){}
 /* Landscape phone to portrait tablet */
 @media (min-width: 768px){}
 /* Portrait tablet and small desktops */
-@media (min-width: 940px){
-	.wrapper {
-		padding-left: 50px;
-		padding-right: 50px;
-	}
-}
+
 /* Large monitors */
 @media (min-width: 1400px){}
 

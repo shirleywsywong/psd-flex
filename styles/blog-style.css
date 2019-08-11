@@ -202,6 +202,13 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   background: #eafefc;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.3rem;
+  }
 }
 
 section {
@@ -215,6 +222,12 @@ footer {
   padding: 0.5rem;
   font-size: 0.75rem;
   color: #0d457f;
+}
+
+@media (min-width: 1200px) {
+  footer {
+    font-size: 1rem;
+  }
 }
 
 .flex {
@@ -234,6 +247,13 @@ footer {
   padding-right: 30px;
 }
 
+@media (min-width: 940px) {
+  .wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 .button {
   font-family: 'IM Fell English', serif;
   background: #fdd908;
@@ -245,13 +265,6 @@ footer {
 /* Landscape phones and down */
 /* Landscape phone to portrait tablet */
 /* Portrait tablet and small desktops */
-@media (min-width: 940px) {
-  .wrapper {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
 /* Large monitors */
 .top-nav {
   position: fixed;
@@ -306,6 +319,7 @@ footer {
 
 @media (min-width: 940px) {
   .top-nav {
+    position: absolute;
     background: none;
     width: 50%;
     padding-left: 50px;
@@ -315,6 +329,17 @@ footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+@media (min-width: 940px) and (min-width: 1200px) {
+  .top-nav ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (min-width: 940px) {
   .top-nav ul a {
     padding: 20px 30px;
   }
@@ -323,6 +348,39 @@ footer {
 /* Landscape phones and down */
 /* Portrait tablet and small desktops */
 /* Large monitors */
+input[type=text],
+input[type=email] {
+  width: 100%;
+}
+
+@media (min-width: 940px) {
+  input[type=text],
+  input[type=email] {
+    width: 47%;
+  }
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+}
+
+@media (min-width: 1200px) {
+  textarea {
+    height: 300px;
+  }
+}
+
+form {
+  padding: 30px;
+}
+
+@media (min-width: 1200px) {
+  form {
+    padding: 50px;
+  }
+}
+
 .form-half {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -349,6 +407,12 @@ footer {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .form-button {
+    font-size: 1.3rem;
+  }
+}
+
 body {
   background: #eafefc;
 }
@@ -373,6 +437,7 @@ h1 {
 
 .hero-banner {
   width: 100vw;
+  max-width: 100%;
   height: 60vw;
   background-color: #0d457f;
   background-repeat: no-repeat;
@@ -382,12 +447,53 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   background-image: url(../assets/blog-header.jpg);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 940px) {
   .hero-banner {
     width: 100vw;
     height: 35vw;
+  }
+}
+
+@media (min-width: 940px) {
+  .hero-banner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+header {
+  z-index: 10;
+}
+
+main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 940px) {
+  main {
+    margin-top: -100px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 940px) {
+  .blog {
+    padding-right: 0;
   }
 }
 
@@ -398,10 +504,28 @@ h1 {
           flex-direction: column;
 }
 
+@media (min-width: 940px) {
+  .blog-content {
+    padding: 30px;
+  }
+}
+
 .blog-content .blog-img {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+@media (min-width: 940px) {
+  .blog-content .blog-img {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .blog-content .blog-img img {
+    z-index: 30;
+    height: 100%;
+  }
 }
 
 .blog-content p:nth-last-child(2), .blog-content p:last-child {
@@ -417,6 +541,12 @@ h1 {
   text-transform: uppercase;
   font-style: italic;
   color: #0d457f;
+}
+
+@media (min-width: 940px) {
+  .blog-content {
+    padding: 0;
+  }
 }
 
 aside {
@@ -441,6 +571,24 @@ aside ul li {
   color: white;
   list-style: disc;
   margin-left: 1rem;
+  padding: 7px;
+}
+
+aside .mission, aside .recent-post {
+  margin-left: 30px;
+}
+
+@media (min-width: 940px) {
+  aside {
+    width: 35%;
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  aside {
+    margin-top: 13%;
+  }
 }
 
 .comments h3 {
@@ -470,12 +618,12 @@ aside ul li {
 
 form {
   background: #eafefc;
+  padding: 0;
 }
 
 input[type=text],
 input[type=email] {
   padding: 10px 15px;
-  width: 100%;
   margin: 10px 0;
   border: 0;
   background: #eafefc;
@@ -483,34 +631,13 @@ input[type=email] {
   border-bottom: 1px solid #fdd908;
 }
 
-@media (min-width: 940px) {
-  input[type=text],
-  input[type=email] {
-    width: 47%;
-  }
-}
-
 textarea {
   padding: 10px 15px;
-  width: 100%;
   margin: 10px 0;
   border: 0;
   background: #eafefc;
   color: white;
-  height: 150px;
   border: 1px solid #fdd908;
-}
-
-@media (min-width: 940px) {
-  textarea {
-    width: 47%;
-  }
-}
-
-@media (min-width: 940px) {
-  textarea {
-    width: 100%;
-  }
 }
 
 .form-button {

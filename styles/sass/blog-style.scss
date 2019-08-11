@@ -14,19 +14,62 @@ h1 {
 .hero-banner {
   @include headerBanner;
   background-image: url(../assets/blog-header.jpg);
+  justify-content: center;
+  @media (min-width: 940px){
+    justify-content: flex-start;
+  }
 }
 
 // blog content section styles
+header {
+  z-index: 10;
+}
+main {
+  flex-direction: column;
+  @media (min-width: 940px){
+    margin-top: -100px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+.blog {
+  @media (min-width: 940px){
+    padding-right: 0;
+  }
+}
 .blog-content {
   flex-direction: column;
+  @media (min-width: 940px){
+    padding: 30px;
+  }
   .blog-img {
     order: 1;
+    @media (min-width: 940px){
+      order: 0;
+      // &::before {
+      //   content: '';
+      //   position: absolute;
+      //   top: 20px;
+      //   left: -20px;
+      //   width: 86%;
+      //   height: 100%;
+      //   background: $dandelion;
+      //   z-index: 20;
+      // }
+      img {
+        z-index: 30;
+        height: 100%;
+      }
+    }
   }
   p:nth-last-child(2), p:last-child {
     order: 2;
   }
   h2 {
     @include headingStyle ($dark-blue);
+  }
+  @media (min-width: 940px){
+    padding: 0;
   }
 }
 
@@ -44,6 +87,17 @@ aside {
     color: $white;
     list-style: disc;
     margin-left: 1rem;
+    padding: 7px;
+  }
+  .mission, .recent-post {
+    margin-left: 30px;
+  }
+  @media (min-width: 940px){
+    width: 35%;
+    margin-top: 100px;
+  }
+  @media (min-width: 1200px){
+    margin-top: 13%;
   }
 }
 
@@ -67,6 +121,7 @@ aside {
 // other form styles are found in forms partial
 form {
   background: $ice-blue;
+  padding: 0;
 }
 input[type=text], 
 input[type=email]
@@ -76,11 +131,7 @@ input[type=email]
 }
 textarea {
   @include formStyle($ice-blue, $white);
-  height: 150px;
   border: 1px solid $dandelion;
-  @media (min-width: 940px){
-    width: 100%;
-  }
 }
 .form-button {
   color: $dandelion;
