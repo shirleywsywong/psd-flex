@@ -463,3 +463,153 @@ h1 {
             justify-content: flex-start;
   }
 }
+
+.top-image {
+  display: none;
+}
+
+.snippet-title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.snippet-title i {
+  color: #0d457f;
+  margin: 0 1.5rem;
+  padding: 1rem;
+  background: #fdd908;
+  border-radius: 50%;
+}
+
+.snippet-title h3 {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #0d457f;
+}
+
+@media (min-width: 1200px) {
+  .snippet-title h3 {
+    font-size: 2.5rem;
+  }
+}
+
+.snippet p {
+  margin: 0 30px;
+}
+
+.feature {
+  background: #0d457f;
+  padding-top: 0;
+  color: white;
+}
+
+.feature h2 {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .feature h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.feature-content {
+  padding: 30px;
+}
+
+.feature-content .button {
+  padding: 10px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.about {
+  padding: 30px;
+}
+
+.about h2 {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #0d457f;
+}
+
+@media (min-width: 1200px) {
+  .about h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.about .button {
+  padding: 10px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.mid-page-banner {
+  display: none;
+}
+
+@media (min-width: 940px) {
+  .mid-page-banner {
+    display: block;
+    width: 100vw;
+    max-width: 100%;
+    height: 60vw;
+    background-color: #0d457f;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: url(../assets/banner.jpg);
+  }
+}
+
+@media (min-width: 940px) and (min-width: 940px) {
+  .mid-page-banner {
+    width: 100vw;
+    height: 35vw;
+  }
+}
+
+.contest {
+  padding: 30px;
+}
+
+.contest h2 {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #0d457f;
+}
+
+@media (min-width: 1200px) {
+  .contest h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.contest .button {
+  padding: 10px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.gallery {
+  background: #0d457f;
+}

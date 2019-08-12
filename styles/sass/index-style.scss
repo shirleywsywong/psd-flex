@@ -18,3 +18,86 @@ h1 {
     justify-content: flex-start;
   }
 }
+
+//snippet section
+.top-image {
+    display: none;
+}
+.snippet-title {
+    align-items: center;
+    i{
+        color: $dark-blue;
+        margin: 0 1.5rem;
+        padding: 1rem;
+        background: $dandelion;
+        border-radius: 50%;
+    }
+    h3 {
+        @include headingStyle ($dark-blue);
+    }
+}
+.snippet {
+    p {
+        margin: 0 30px;
+    }
+}
+
+// feature section
+.feature {
+    background: $dark-blue;
+    padding-top: 0;
+    color: $white;
+    h2{
+        @include headingStyle($white);
+    }
+}
+.feature-content {
+    padding: 30px;
+    .button {
+        padding: 10px;
+        display: inline-block;
+        margin: 10px 0;
+    }
+}
+
+//about section
+.about {
+    padding: 30px;
+    h2{
+        @include headingStyle($dark-blue);
+    }
+    .button {
+        padding: 10px;
+        display: inline-block;
+        margin: 10px 0;
+    }
+}
+
+//mid page banner
+.mid-page-banner
+{
+    display: none;
+    @media (min-width: 940px){
+        display: block;
+        @include headerBanner;
+        background-image: url(../assets/banner.jpg);
+    }
+}
+
+// contest section
+.contest {
+    padding: 30px;
+    h2 {
+        @include headingStyle($dark-blue);
+    }
+    .button {
+        padding: 10px;
+        display: inline-block;
+        margin: 10px 0;
+    }
+}
+
+//gallery section
+.gallery {
+    background: $dark-blue;
+}
