@@ -10,18 +10,51 @@ body {
 //header and navigation styles are in header partial
 h1 {
   @include h1Style($dandelion);
+    @media (min-width: 940px){
+        width:50%;
+        font-size: 3rem;
+    }
+    @media (min-width: 1200px){
+        font-size: 4rem;
+    }
 }
 .hero-banner {
-  @include headerBanner;
-  background-image: url(../assets/home-header.jpg);
-  @media (min-width: 940px){
-    justify-content: flex-start;
-  }
+    @include headerBanner;
+    background-image: url(../assets/home-header.jpg);
+    background-position: top center;
+    @media (min-width: 940px){
+        height: 45vw;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
 }
 
 //snippet section
 .top-image {
     display: none;
+    @media (min-width: 940px){
+        display:flex;
+        margin-top: -300px;
+        justify-content: flex-end;
+    }
+    @media (min-width: 1200px){
+        display:flex;
+        margin-top: -450px;
+        justify-content: flex-end;
+    }
+    img {
+        width: 56%;
+    }
+}
+.intro-snippets {
+    ul {
+        flex-direction: column;
+        @media (min-width: 940px){
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly
+        }
+    }
 }
 .snippet-title {
     align-items: center;
@@ -40,6 +73,9 @@ h1 {
     p {
         margin: 0 30px;
     }
+    @media (min-width: 940px){
+        width: 45%;
+    }
 }
 
 // feature section
@@ -51,12 +87,44 @@ h1 {
         @include headingStyle($white);
     }
 }
+.feature1 {
+    flex-direction: column;
+    @media (min-width: 940px){
+        flex-direction: row;
+        .feature-img {
+            width: 40%;
+        }
+        .feature-content {
+            width: 60%;
+        }
+    }
+}
+.feature2 {
+    flex-direction: column;
+    @media (min-width: 940px){
+        flex-direction: row-reverse;
+        .feature-img {
+            width: 40%;
+        }
+        .feature-content {
+            width: 60%;
+        }
+    }
+}
 .feature-content {
     padding: 30px;
     .button {
         padding: 10px;
         display: inline-block;
         margin: 10px 0;
+    }
+    @media (min-width: 940px){
+        width: 60%;
+    }
+}
+.feature-img {
+    @media (min-width: 940px){
+        width: 40%;
     }
 }
 
@@ -70,6 +138,9 @@ h1 {
         padding: 10px;
         display: inline-block;
         margin: 10px 0;
+    }
+    @media (min-width: 940px){
+        text-align: center;
     }
 }
 
@@ -87,6 +158,7 @@ h1 {
 // contest section
 .contest {
     padding: 30px;
+    flex-direction: column;
     h2 {
         @include headingStyle($dark-blue);
     }
@@ -95,9 +167,32 @@ h1 {
         display: inline-block;
         margin: 10px 0;
     }
+    @media (min-width: 940px){
+        padding: 50px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        .contest-img {
+            align-items: stretch;
+            width: 25%;
+            @include l-shadow($dandelion);
+        }
+        .contest-content {
+            width: 70%;
+        }
+    }
 }
 
 //gallery section
 .gallery {
     background: $dark-blue;
+    @media (min-width: 940px){
+        padding: 50px;
+        ul {
+            justify-content: space-between;
+        }
+        li {
+            width: calc((100% - 40px) / 3);
+        }
+    }
 }
