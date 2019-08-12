@@ -61,7 +61,7 @@ aside {
 form {
   background: $dark-blue;
   @media (min-width: 940px){
-    @include r-shadow;
+    @include r-shadow($dandelion);
     margin-bottom: 100px;
     width: 60%;
   }

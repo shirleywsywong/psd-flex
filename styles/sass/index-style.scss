@@ -1,5 +1,20 @@
 @import 'partials/setup';
+@import 'partials/global';
+@import 'partials/header';
+@import 'partials/form';
 
 body {
-    background: yellow;
+  background: $ice-blue;
+}
+
+//header and navigation styles are in header partial
+h1 {
+  @include h1Style($dandelion);
+}
+.hero-banner {
+  @include headerBanner;
+  background-image: url(../assets/home-header.jpg);
+  @media (min-width: 940px){
+    justify-content: flex-start;
+  }
 }

@@ -30,56 +30,48 @@ main {
     margin-top: -100px;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 .blog {
   @media (min-width: 940px){
     padding-right: 0;
+    padding-top: 0;
+    width: 60%;
+  }
+}
+.blog-img {
+  display: none;
+  @media (min-width: 940px){
+    display: flex;
+    align-items: stretch;
+    @include l-shadow ($dandelion);
+    img {
+      // z-index: 30;
+      height: 100%;
+    }
+  }
+}
+.blog-img-mobile {
+@media (min-width: 940px){
+    display: none;
   }
 }
 .blog-content {
-  flex-direction: column;
   @media (min-width: 940px){
-    padding: 30px;
+    padding: 2rem 3rem;
   }
-  .blog-img {
-    order: 1;
-    @media (min-width: 940px){
-      order: 0;
-      // &::before {
-      //   content: '';
-      //   position: absolute;
-      //   top: 20px;
-      //   left: -20px;
-      //   width: 86%;
-      //   height: 100%;
-      //   background: $dandelion;
-      //   z-index: 20;
-      // }
-      img {
-        z-index: 30;
-        height: 100%;
-      }
-    }
-  }
-  p:nth-last-child(2), p:last-child {
-    order: 2;
+  @media (min-width: 1200px){
+    padding: 3rem 5rem;
   }
   h2 {
     @include headingStyle ($dark-blue);
-  }
-  @media (min-width: 940px){
-    padding: 0;
   }
 }
 
 // side section styles
 aside {
-  background: $dark-blue;
   padding-bottom: 30px;
-  h3 {
-    @include headingStyle ($dandelion);
-  }
   p, a {
     color: $white;
   }
@@ -89,20 +81,50 @@ aside {
     margin-left: 1rem;
     padding: 7px;
   }
-  .mission, .recent-post {
-    margin-left: 30px;
-  }
   @media (min-width: 940px){
     width: 35%;
-    margin-top: 100px;
+    margin-top: 175px;
   }
   @media (min-width: 1200px){
     margin-top: 13%;
   }
 }
+.side-image {
+  @media (min-width: 940px){
+    @include r-shadow ($dark-blue);
+  }
+  img {
+    height: 100%;
+  }
+}
+.side-content {
+  background: $dark-blue;
+  padding-bottom: 30px;
+  @media (min-width: 940px){
+    margin-left: 20px;
+    width: 100%;
+  }
+  h3 {
+    @include headingStyle ($dandelion);
+    margin: 0;
+    padding: 30px 0;
+    @media (min-width: 940px){
+      margin-top: 19px;
+    }
+  }
+}
 
 // comments section
 .comments {
+  width: 100%;
+  justify-content: flex-end;
+  padding-left: 70px;
+  .comment-section {
+    @media (min-width: 1200px){
+      width: 60%;
+      padding: 3rem 5rem;
+    }
+  }
   h3 {
     @include headingStyle ($dark-blue);
   }
@@ -115,6 +137,10 @@ aside {
   }
   .comment-date {
     margin: 10px;
+    color: $dark-blue;
+    @media (min-width: 940px){
+      font-weight: bold;
+    }
   }
 }
 

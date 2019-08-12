@@ -78,14 +78,17 @@ footer {
   text-transform: uppercase;
   font-style: italic;
   color: $color;
+  @media (min-width: 1200px){
+      font-size: 2.5rem
+    }
 }
 //left-box shadow
-@mixin l-shadow {
-	box-shadow: -20px 20px $dandelion;
+@mixin l-shadow($color) {
+	box-shadow: -20px 20px $color;
 }
 //right-box shadow
-@mixin r-shadow {
-	box-shadow: 20px 20px $dandelion;
+@mixin r-shadow($color) {
+	box-shadow: 20px 20px $color;
 }
 
 /* Landscape phones and down */

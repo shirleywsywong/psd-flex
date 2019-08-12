@@ -488,50 +488,56 @@ main {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
 @media (min-width: 940px) {
   .blog {
     padding-right: 0;
+    padding-top: 0;
+    width: 60%;
   }
 }
 
-.blog-content {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.blog-img {
+  display: none;
 }
 
 @media (min-width: 940px) {
-  .blog-content {
-    padding: 30px;
+  .blog-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-shadow: -20px 20px #fdd908;
+            box-shadow: -20px 20px #fdd908;
   }
-}
-
-.blog-content .blog-img {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
-@media (min-width: 940px) {
-  .blog-content .blog-img {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .blog-content .blog-img img {
-    z-index: 30;
+  .blog-img img {
     height: 100%;
   }
 }
 
-.blog-content p:nth-last-child(2), .blog-content p:last-child {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+@media (min-width: 940px) {
+  .blog-img-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 940px) {
+  .blog-content {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog-content {
+    padding: 3rem 5rem;
+  }
 }
 
 .blog-content h2 {
@@ -543,24 +549,14 @@ main {
   color: #0d457f;
 }
 
-@media (min-width: 940px) {
-  .blog-content {
-    padding: 0;
+@media (min-width: 1200px) {
+  .blog-content h2 {
+    font-size: 2.5rem;
   }
 }
 
 aside {
-  background: #0d457f;
   padding-bottom: 30px;
-}
-
-aside h3 {
-  font-family: 'IM Fell English', serif;
-  font-size: 1.6rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-style: italic;
-  color: #fdd908;
 }
 
 aside p, aside a {
@@ -574,20 +570,77 @@ aside ul li {
   padding: 7px;
 }
 
-aside .mission, aside .recent-post {
-  margin-left: 30px;
-}
-
 @media (min-width: 940px) {
   aside {
     width: 35%;
-    margin-top: 100px;
+    margin-top: 175px;
   }
 }
 
 @media (min-width: 1200px) {
   aside {
     margin-top: 13%;
+  }
+}
+
+@media (min-width: 940px) {
+  .side-image {
+    -webkit-box-shadow: 20px 20px #0d457f;
+            box-shadow: 20px 20px #0d457f;
+  }
+}
+
+.side-image img {
+  height: 100%;
+}
+
+.side-content {
+  background: #0d457f;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 940px) {
+  .side-content {
+    margin-left: 20px;
+    width: 100%;
+  }
+}
+
+.side-content h3 {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #fdd908;
+  margin: 0;
+  padding: 30px 0;
+}
+
+@media (min-width: 1200px) {
+  .side-content h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 940px) {
+  .side-content h3 {
+    margin-top: 19px;
+  }
+}
+
+.comments {
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-left: 70px;
+}
+
+@media (min-width: 1200px) {
+  .comments .comment-section {
+    width: 60%;
+    padding: 3rem 5rem;
   }
 }
 
@@ -598,6 +651,12 @@ aside .mission, aside .recent-post {
   text-transform: uppercase;
   font-style: italic;
   color: #0d457f;
+}
+
+@media (min-width: 1200px) {
+  .comments h3 {
+    font-size: 2.5rem;
+  }
 }
 
 .comments .comment-title {
@@ -614,6 +673,13 @@ aside .mission, aside .recent-post {
 
 .comments .comment-date {
   margin: 10px;
+  color: #0d457f;
+}
+
+@media (min-width: 940px) {
+  .comments .comment-date {
+    font-weight: bold;
+  }
 }
 
 form {
