@@ -205,9 +205,15 @@ body {
   font-size: 1.1rem;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 940px) {
   body {
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h3 {
+    line-height: 0;
   }
 }
 
@@ -260,6 +266,7 @@ footer {
   color: #0d457f;
   text-transform: uppercase;
   font-style: italic;
+  text-align: center;
 }
 
 /* Landscape phones and down */
@@ -336,6 +343,7 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    padding-top: 20px;
   }
 }
 
@@ -532,6 +540,14 @@ aside {
   padding: 10px;
 }
 
+.social-menu li a {
+  color: #0d457f;
+}
+
+.contact-links a:focus {
+  color: #fdd908;
+}
+
 .address {
   margin: 20px 0;
 }
@@ -559,6 +575,12 @@ input[type=email] {
   border-bottom: 1px solid #fdd908;
 }
 
+input[type=text]:focus,
+input[type=email]:focus {
+  background: white;
+  color: #0d457f;
+}
+
 textarea {
   padding: 10px 15px;
   margin: 10px 0;
@@ -566,4 +588,14 @@ textarea {
   background: #0d457f;
   color: white;
   border: 1px solid #fdd908;
+}
+
+textarea:focus {
+  background: white;
+  color: #0d457f;
+}
+
+.form-button:focus {
+  background: white;
+  color: #0d457f;
 }

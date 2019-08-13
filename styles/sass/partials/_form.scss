@@ -5,6 +5,10 @@
     border: 0;
     background: $bgColor;
     color: $fontColor;
+    &:focus {
+        background: $fontColor;
+        color: $bgColor;
+    }
 }
 input[type=text], 
 input[type=email] {

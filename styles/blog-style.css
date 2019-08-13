@@ -205,9 +205,15 @@ body {
   font-size: 1.1rem;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 940px) {
   body {
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h3 {
+    line-height: 0;
   }
 }
 
@@ -260,6 +266,7 @@ footer {
   color: #0d457f;
   text-transform: uppercase;
   font-style: italic;
+  text-align: center;
 }
 
 /* Landscape phones and down */
@@ -336,6 +343,7 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    padding-top: 20px;
   }
 }
 
@@ -480,7 +488,6 @@ main {
 
 @media (min-width: 940px) {
   main {
-    margin-top: -100px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -498,7 +505,10 @@ main {
   .blog {
     padding-right: 0;
     padding-top: 0;
+    padding-left: 20px;
     width: 60%;
+    border-left: 2px solid #fdd908;
+    border-bottom: 2px solid #fdd908;
   }
 }
 
@@ -514,6 +524,8 @@ main {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    position: relative;
+    margin-top: -100px;
     -webkit-box-shadow: -20px 20px #fdd908;
             box-shadow: -20px 20px #fdd908;
   }
@@ -551,7 +563,7 @@ main {
 
 @media (min-width: 1200px) {
   .blog-content h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -573,7 +585,7 @@ aside ul li {
 @media (min-width: 940px) {
   aside {
     width: 35%;
-    margin-top: 175px;
+    margin-top: 100px;
   }
 }
 
@@ -587,6 +599,13 @@ aside ul li {
   .side-image {
     -webkit-box-shadow: 20px 20px #0d457f;
             box-shadow: 20px 20px #0d457f;
+  }
+}
+
+@media (min-width: 1500px) {
+  .side-image {
+    -webkit-box-shadow: 40px 40px #0d457f;
+            box-shadow: 40px 40px #0d457f;
   }
 }
 
@@ -606,6 +625,16 @@ aside ul li {
   }
 }
 
+@media (min-width: 1500px) {
+  .side-content {
+    margin-left: 40px;
+  }
+}
+
+.side-content a:hover, .side-content a:focus {
+  color: #fdd908;
+}
+
 .side-content h3 {
   font-family: 'IM Fell English', serif;
   font-size: 1.6rem;
@@ -619,7 +648,7 @@ aside ul li {
 
 @media (min-width: 1200px) {
   .side-content h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -631,16 +660,16 @@ aside ul li {
 
 .comments {
   width: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-left: 70px;
 }
 
-@media (min-width: 1200px) {
-  .comments .comment-section {
-    width: 60%;
-    padding: 3rem 5rem;
+@media (min-width: 940px) {
+  .comments {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -655,20 +684,8 @@ aside ul li {
 
 @media (min-width: 1200px) {
   .comments h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
-}
-
-.comments .comment-title {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.comments .comment-img {
-  width: 10%;
 }
 
 .comments .comment-date {
@@ -680,6 +697,35 @@ aside ul li {
   .comments .comment-date {
     font-weight: bold;
   }
+}
+
+@media (min-width: 940px) {
+  .comment-section {
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comment-section {
+    width: 60%;
+    padding: 3rem 5rem;
+  }
+}
+
+.comment-img {
+  width: 10%;
+}
+
+.comment-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 95%;
+}
+
+.comment-content p {
+  padding-left: 15px;
 }
 
 form {
@@ -697,16 +743,32 @@ input[type=email] {
   border-bottom: 1px solid #fdd908;
 }
 
+input[type=text]:focus,
+input[type=email]:focus {
+  background: #0d457f;
+  color: #eafefc;
+}
+
 textarea {
   padding: 10px 15px;
   margin: 10px 0;
   border: 0;
   background: #eafefc;
-  color: white;
+  color: #0d457f;
   border: 1px solid #fdd908;
+}
+
+textarea:focus {
+  background: #0d457f;
+  color: #eafefc;
 }
 
 .form-button {
   color: #fdd908;
   background-color: #0d457f;
+}
+
+.form-button:focus {
+  background: #fdd908;
+  color: #0d457f;
 }

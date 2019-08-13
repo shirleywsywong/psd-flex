@@ -50,8 +50,16 @@ aside {
     justify-content: flex-start;
   }
 }
-.social-menu li {
+.social-menu li{
   padding: 10px;
+  a {
+    color: $dark-blue;
+  }
+}
+.contact-links {
+  a:focus {
+    color: $dandelion;
+  }
 }
 .address {
   margin: 20px 0;
@@ -77,4 +85,8 @@ input[type=email]
 textarea {
   @include formStyle($dark-blue, $white);
   border: 1px solid $dandelion;
+}
+.form-button:focus {
+  background: $white;
+  color: $dark-blue;
 }
