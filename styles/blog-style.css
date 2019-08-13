@@ -179,6 +179,19 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* 940px down - mobile view, slight adjustment at 768px*/
+/* 940px and up - desktop view, slight adjustments at 1200, 1500 */
 ul {
   margin: 0;
   padding: 0;
@@ -191,6 +204,8 @@ li {
 a {
   text-decoration: none;
   color: black;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 img {
@@ -240,12 +255,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
-}
-
-.grid {
-  display: -ms-grid;
-  display: grid;
 }
 
 .wrapper {
@@ -269,10 +278,6 @@ footer {
   text-align: center;
 }
 
-/* Landscape phones and down */
-/* Landscape phone to portrait tablet */
-/* Portrait tablet and small desktops */
-/* Large monitors */
 .top-nav {
   position: fixed;
   width: 100%;

@@ -6,7 +6,11 @@ $dandelion:#fdd908;
 $dark-blue:#0d457f;
 $nav-blue: rgba(13, 69, 127, 0.8);
 
-//basic styles
+// break points listing:
+/* 940px down - mobile view, slight adjustment at 768px*/
+/* 940px and up - desktop view, slight adjustments at 1200, 1500 */
+
+//global styles
 ul {
 	margin: 0;
 	padding: 0;
@@ -17,6 +21,7 @@ li {
 a {
   text-decoration: none;
   color: $black;
+  transition: all 0.2s ease;
 }
 img {
   width: 100%;
@@ -54,10 +59,6 @@ footer {
 //class library
 .flex {
 	display: flex;
-	display: -webkit-flex;
-}
-.grid {
-  display: grid;
 }
 .wrapper {
 	padding-left: 30px;
@@ -96,13 +97,4 @@ footer {
 @mixin r-shadow($color) {
 	box-shadow: 20px 20px $color;
 }
-
-/* Landscape phones and down */
-@media (min-width: 480px){}
-/* Landscape phone to portrait tablet */
-@media (min-width: 768px){}
-/* Portrait tablet and small desktops */
-
-/* Large monitors */
-@media (min-width: 1400px){}
 
