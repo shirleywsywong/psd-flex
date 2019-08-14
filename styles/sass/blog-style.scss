@@ -1,4 +1,3 @@
-@import 'partials/setup';
 @import 'partials/global';
 @import 'partials/header';
 @import 'partials/form';
@@ -153,6 +152,9 @@ aside {
     width: 60%;
     padding: 3rem 5rem;
   }
+}
+.comment01, .comment02 {
+  max-width: 800px;
 }
 .comment-img {
   width: 10%;
